@@ -1,26 +1,16 @@
+<script setup lang="ts"></script>
+
 <template>
-  <div>
-    <v-container fluid>
-      <v-btn variant="flat" color="primary" @click="sayHi" class="mb-4"
-        >Click me</v-btn
-      >
-      <v-alert type="success">I'm a success alert.</v-alert>
-
-      <br />
-
-      <v-alert type="info">I'm an info alert.</v-alert>
-
-      <br />
-
-      <v-alert type="warning">I'm a warning alert.</v-alert>
-
-      <br />
-
-      <v-alert type="error">I'm an error alert.</v-alert>
-    </v-container>
-  </div>
+  <v-row>
+    <v-col cols="12" sm="12" lg="8"> <DashboardSalesOverview /></v-col>
+    <v-col cols="12" sm="12" lg="4"><DashboardBlog /></v-col>
+    <v-col cols="12" sm="12" lg="4">
+      <DashboardProfileCard />
+      <div class="mb-7"></div>
+      <DashboardContactsMyContacts />
+    </v-col>
+    <v-col cols="12" sm="12" lg="8">
+      <DashboardTimeline />
+    </v-col>
+  </v-row>
 </template>
-
-<script setup lang="ts">
-const sayHi = () => alert("Hello world");
-</script>

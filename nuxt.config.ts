@@ -1,15 +1,17 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-    srcDir: "./src",
-    css: ['vuetify/lib/styles/main.sass',
+  srcDir: './src',
+  ssr: false,
+  css: [
+    'vuetify/lib/styles/main.sass',
     // 'mdi/css/materialdesignicons.min.css'
-    ],
-    build: {
-      transpile: ['vuetify'],
+  ],
+  build: {
+    transpile: ['vuetify'],
+  },
+  vite: {
+    define: {
+      'process.env.DEBUG': false,
     },
-    vite: {
-      define: {
-        'process.env.DEBUG': false,
-      },
-    },
-})
+  },
+});
